@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 This is a URL shortener.
+  h1 #{sources}
+  -/*
+  ul
+  - urlKeys.forEach(element => console.log(element))
+  - const banana = Object.fromEntries(urlKeys)
+  each val, key in banana
+    li= key + ': ' + val
+  - console.log(urlKeys);
+  -*/
