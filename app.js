@@ -20,7 +20,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
-const urlKeys = new Map([['g', 'google.com'], ['fb', 'facebook.com'], ['upf', 'upframe.io'], ['mw','moonwith.com']]);
+const urlKeys = new Map(
+  [['upf', 'upframe.io'],
+  ['mw','moonwith.com'],
+  ['t', 'telegram.me/malikpiara'],
+  ['wa', 'wa.me/+351962119084'],
+  ['l', 'linkedin.com/in/malikpiara'],
+  ['ig', 'instagram.com/malikpiara'],
+  ['earnest', 'play.google.com/store/apps/details?id=com.glenncoding.earnestcards']
+]);
 
 app.get('/:id', function(req, res) {
   if (urlKeys.get(req.params.id)) {
