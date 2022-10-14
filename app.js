@@ -28,7 +28,8 @@ const urlKeys = new Map([
   ['l', 'linkedin.com/in/malikpiara'],
   ['ig', 'instagram.com/malikpiara'],
   ['earnest', 'play.google.com/store/apps/details?id=com.glenncoding.earnestcards'],
-  ['book', 'calendar.google.com/calendar/selfsched?sstoken=UUtUeHQ0T0RCODBvfGRlZmF1bHR8ZGMzOWQ1NDNlZjk0YWY2NjZiOTlkZjUyZmJiODBiMzE']
+  ['book', 'calendar.google.com/calendar/selfsched?sstoken=UUtUeHQ0T0RCODBvfGRlZmF1bHR8ZGMzOWQ1NDNlZjk0YWY2NjZiOTlkZjUyZmJiODBiMzE'],
+  ['berlin', 't.me/+OGAZMUob59w1OTJk']
 ]);
 
 app.get('/:id', function(req, res) {
