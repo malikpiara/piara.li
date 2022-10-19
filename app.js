@@ -32,6 +32,15 @@ const urlKeys = new Map([
   ['berlin', 't.me/+OGAZMUob59w1OTJk']
 ]);
 
+let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
+// Accessing a key.
+// let json = JSON.parse(urlKeysToJson);
+
+// JSON endpoint
+app.get('/api', function(req, res) {
+  res.send(urlKeysToJson);
+});
+
 app.get('/:id', function(req, res) {
   if (urlKeys.get(req.params.id)) {
   res.redirect('https://' + urlKeys.get(req.params.id));
