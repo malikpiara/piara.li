@@ -29,7 +29,8 @@ const urlKeys = new Map([
   ['ig', 'instagram.com/malikpiara'],
   ['earnest', 'play.google.com/store/apps/details?id=com.glenncoding.earnestcards'],
   ['book', 'calendar.google.com/calendar/selfsched?sstoken=UUtUeHQ0T0RCODBvfGRlZmF1bHR8ZGMzOWQ1NDNlZjk0YWY2NjZiOTlkZjUyZmJiODBiMzE'],
-  ['berlin', 't.me/+OGAZMUob59w1OTJk']
+  ['berlin', 't.me/+OGAZMUob59w1OTJk'],
+  ['joni', 'jonathanfreiberger.de/']
 ]);
 
 let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
