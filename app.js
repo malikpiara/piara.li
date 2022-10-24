@@ -28,7 +28,7 @@ const urlKeys = new Map([
   ['l', 'linkedin.com/in/malikpiara'],
   ['ig', 'instagram.com/malikpiara'],
   ['earnest', 'play.google.com/store/apps/details?id=com.glenncoding.earnestcards'],
-  ['book', 'calendar.google.com/calendar/selfsched?sstoken=UUtUeHQ0T0RCODBvfGRlZmF1bHR8ZGMzOWQ1NDNlZjk0YWY2NjZiOTlkZjUyZmJiODBiMzE'],
+  ['book', 'moonwith.com/book'],
   ['berlin', 't.me/+OGAZMUob59w1OTJk'],
   ['joni', 'jonathanfreiberger.de/']
 ]);
