@@ -32,6 +32,8 @@ const mwComments =
       'content': 'Always on point, needed a bolt here as I feel in between two of these jobs, just need to embrace where I am and keep learning and thriving.',
     }
   ];
+  
+const commentsToJSON = JSON.stringify(mwComments);
 
 const urlKeys = new Map([
   ['upf', 'upframe.io'],
@@ -59,7 +61,7 @@ app.get('/api', function(req, res) {
 
 // Endpoint for Comments. TODO: Move to another API.
 app.get('/comments', function(req, res) {
-  res.send(mwComments);
+  res.send(commentsToJSON);
 });
 
 app.get('/:id', function(req, res) {
