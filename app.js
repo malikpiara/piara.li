@@ -30,7 +30,8 @@ const urlKeys = new Map([
   ['earnest', 'play.google.com/store/apps/details?id=com.glenncoding.earnestcards'],
   ['book', 'moonwith.com/book'],
   ['berlin', 't.me/+OGAZMUob59w1OTJk'],
-  ['joni', 'jonathanfreiberger.de/']
+  ['joni', 'jonathanfreiberger.de/'],
+  ['camelstripe', 'form.typeform.com/to/Z2hgSqGJ']
 ]);
 
 let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
