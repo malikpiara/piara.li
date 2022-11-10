@@ -24,12 +24,16 @@ app.use('/', indexRouter);
 const mwComments = 
   [
     {
+      'id': 'c00001',
       'author': 'John Green',
       'content': 'Always on point, needed a jolt here as I feel in between two of these jobs, just need to embrace where I am and keep learning and growing.',
+      'post_id': 'copy'
     },
     {
+      'id': 'c00002',
       'author': 'Hank Green',
       'content': 'Always on point, needed a bolt here as I feel in between two of these jobs, just need to embrace where I am and keep learning and thriving.',
+      'post_id': 'copy'
     }
   ];
   
