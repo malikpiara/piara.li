@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // Temporary comments data structure. To be moved to another API soon.
-const mwComments = new Object(
+const mwComments = 
   [
     {
       'author': 'John Green',
@@ -31,8 +31,7 @@ const mwComments = new Object(
       'author': 'Hank Green',
       'content': 'Always on point, needed a bolt here as I feel in between two of these jobs, just need to embrace where I am and keep learning and thriving.',
     }
-  ]
-);
+  ];
 
 const urlKeys = new Map([
   ['upf', 'upframe.io'],
