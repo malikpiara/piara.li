@@ -20,6 +20,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+// Temporary comments data structure. To be moved to another API soon.
+const mwComments = new Object(
+  [
+    {
+      'author': 'John Green',
+      'content': 'Always on point, needed a jolt here as I feel in between two of these jobs, just need to embrace where I am and keep learning and growing.',
+    },
+    {
+      'author': 'Hank Green',
+      'content': 'Always on point, needed a bolt here as I feel in between two of these jobs, just need to embrace where I am and keep learning and thriving.',
+    }
+  ]
+);
+
 const urlKeys = new Map([
   ['upf', 'upframe.io'],
   ['mw','moonwith.com'],
@@ -42,6 +56,11 @@ let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
 // JSON endpoint
 app.get('/api', function(req, res) {
   res.send(urlKeysToJson);
+});
+
+// Endpoint for Comments. TODO: Move to another API.
+app.get('/comments', function(req, res) {
+  res.send(mwComments);
 });
 
 app.get('/:id', function(req, res) {
