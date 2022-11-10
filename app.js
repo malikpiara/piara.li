@@ -31,7 +31,8 @@ const urlKeys = new Map([
   ['book', 'moonwith.com/book'],
   ['berlin', 't.me/+OGAZMUob59w1OTJk'],
   ['joni', 'jonathanfreiberger.de/'],
-  ['camelstripe', 'form.typeform.com/to/Z2hgSqGJ']
+  ['camelstripe', 'form.typeform.com/to/Z2hgSqGJ'],
+  ['meet', 'upframe.whereby.com/team']
 ]);
 
 let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
