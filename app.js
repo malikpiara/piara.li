@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // Temporary comments data structure. To be moved to another API soon.
+// TODO: Create a parameter that enables people to ask for the post_id.
 const mwComments = 
   [
     {
@@ -36,8 +37,6 @@ const mwComments =
       'post_id': 'copy'
     }
   ];
-  
-const commentsToJSON = JSON.stringify(mwComments);
 
 const urlKeys = new Map([
   ['upf', 'upframe.io'],
@@ -58,13 +57,28 @@ let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
 // Accessing a key.
 // let json = JSON.parse(urlKeysToJson);
 
+// Posting comments
+app.post("/post/:post_id/:author/:content", function(req, res) {
+  mwComments.push(
+    {
+      'id': 'c00003',
+      'author': req.params.author,
+      'content': req.params.content,
+      'post_id': req.params.post_id
+    }
+  )
+  res.send(mwComments)
+})
+
 // JSON endpoint
 app.get('/api', function(req, res) {
   res.send(urlKeysToJson);
 });
 
 // Endpoint for Comments. TODO: Move to another API.
+
 app.get('/comments', function(req, res) {
+  const commentsToJSON = JSON.stringify(mwComments);
   res.send(commentsToJSON);
 });
 
@@ -77,11 +91,11 @@ app.get('/:id', function(req, res) {
 });
 
 
-// catch 404 and forward to error handler
+/* // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   // next(createError(404));
   res.redirect('https://moonwith.com/');
-});
+}); */
 
 // error handler
 app.use(function(err, req, res, next) {
