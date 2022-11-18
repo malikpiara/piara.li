@@ -8,6 +8,16 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+// Allowing POST requests from everywhere, including localhost.
+// Warning: Using the wildcard to allow all sites to access a private API is a bad idea.
+// TODO: Change this approach.
+var allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -17,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(allowCrossDomain);
 app.use('/', indexRouter);
 
 // Temporary comments data structure. To be moved to another API soon.
