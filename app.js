@@ -92,6 +92,11 @@ app.get('/comments', function(req, res) {
   res.send(commentsToJSON);
 });
 
+app.get('/comments/:post_id', function(req, res) {
+  const commentsToJSON = JSON.stringify(mwComments.filter(comment => comment.post_id == req.params.post_id));
+  res.send(commentsToJSON);
+});
+
 app.get('/:id', function(req, res) {
   if (urlKeys.get(req.params.id)) {
   res.redirect('https://' + urlKeys.get(req.params.id));
