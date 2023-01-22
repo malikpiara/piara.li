@@ -45,7 +45,8 @@ const urlKeys = new Map([
   ['meet', 'upframe.whereby.com/team'],
   ['notion', 'https://www.notion.so/upframed/Dschool-Team-4-Dashboard-223f3946aced45e5923779999cd13e84'],
   ['zoom', 'https://zoom.us/j/91085992701?pwd=RS8xKzhwbUtYcHcrTGc1SzVDWDVndz09'],
-  ['miro', 'https://miro.com/app/board/uXjVP_n4xb0=/?moveToWidget=3458764539805612586&cot=14']
+  ['miro', 'https://miro.com/app/board/uXjVP_n4xb0=/?moveToWidget=3458764539805612586&cot=14'],
+  ['nathalie', 'https://upframed.notion.site/Lisbon-Guide-For-Nathalie-4dafbc600f0c42cf96cd588e312a408a']
 ]);
 
 let urlKeysToJson = JSON.stringify(Object.fromEntries(urlKeys));
